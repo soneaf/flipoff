@@ -11,7 +11,7 @@ import { mastertourRouter } from './routes/mastertour.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const PORT = process.env.PORT || 3007;
+const PORT = process.env.PORT || 3008;
 const CONFIG_PATH = join(__dirname, 'config.json');
 
 // Load or create config
