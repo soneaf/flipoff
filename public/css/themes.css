@@ -1,0 +1,145 @@
+/* ===== Classic (default) ===== */
+.board[data-theme="classic"] {
+  --tile-bg: #222;
+  --tile-text: #F0F0F0;
+  --tile-seam: rgba(0, 0, 0, 0.3);
+  --board-bg: #1A1A1A;
+  --scramble-1: #00AAFF;
+  --scramble-2: #00FFCC;
+  --scramble-3: #AA00FF;
+  --scramble-4: #FF2D00;
+  --scramble-5: #FFCC00;
+  --scramble-6: #FFFFFF;
+}
+
+/* ===== Airport (Solari board) ===== */
+.board[data-theme="airport"] {
+  --tile-bg: #F5F0E0;
+  --tile-text: #111;
+  --tile-seam: rgba(0, 0, 0, 0.15);
+  --board-bg: #2A2A2A;
+  --scramble-1: #FFD700;
+  --scramble-2: #FFA500;
+  --scramble-3: #FF6B00;
+  --scramble-4: #FFFFFF;
+  --scramble-5: #E0D8C0;
+  --scramble-6: #FFD700;
+}
+
+.board[data-theme="airport"] .tile-front,
+.board[data-theme="airport"] .tile-back {
+  background: var(--tile-bg);
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.15),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.board[data-theme="airport"] .tile-front span,
+.board[data-theme="airport"] .tile-back span {
+  color: var(--tile-text);
+}
+
+.board[data-theme="airport"] .tile-front::after,
+.board[data-theme="airport"] .tile-back::after {
+  background: var(--tile-seam);
+}
+
+/* ===== Train Station ===== */
+.board[data-theme="train-station"] {
+  --tile-bg: #1A3A2A;
+  --tile-text: #E8E0D0;
+  --tile-seam: rgba(0, 0, 0, 0.4);
+  --board-bg: #0D1F15;
+  --scramble-1: #FFD700;
+  --scramble-2: #FF8C00;
+  --scramble-3: #32CD32;
+  --scramble-4: #FFFFFF;
+  --scramble-5: #FFD700;
+  --scramble-6: #E8E0D0;
+}
+
+.board[data-theme="train-station"] .tile-front,
+.board[data-theme="train-station"] .tile-back {
+  background: var(--tile-bg);
+}
+
+.board[data-theme="train-station"] .tile-front span,
+.board[data-theme="train-station"] .tile-back span {
+  color: var(--tile-text);
+}
+
+.board[data-theme="train-station"] {
+  background: var(--board-bg);
+}
+
+/* ===== Neon ===== */
+.board[data-theme="neon"] {
+  --tile-bg: #0A0A0A;
+  --tile-text: #00F5FF;
+  --tile-seam: rgba(0, 245, 255, 0.1);
+  --board-bg: #050508;
+  --scramble-1: #00F5FF;
+  --scramble-2: #FF00FF;
+  --scramble-3: #BC13FE;
+  --scramble-4: #00FF7F;
+  --scramble-5: #FF2D55;
+  --scramble-6: #FFFFFF;
+}
+
+.board[data-theme="neon"] .tile-front,
+.board[data-theme="neon"] .tile-back {
+  background: var(--tile-bg);
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.8),
+    0 0 4px rgba(0, 245, 255, 0.05);
+}
+
+.board[data-theme="neon"] .tile-front span,
+.board[data-theme="neon"] .tile-back span {
+  color: var(--tile-text);
+  text-shadow: 0 0 8px rgba(0, 245, 255, 0.5);
+}
+
+.board[data-theme="neon"] {
+  background: var(--board-bg);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.08);
+}
+
+/* ===== Minimal ===== */
+.board[data-theme="minimal"] {
+  --tile-bg: #2A2A2A;
+  --tile-text: #CCCCCC;
+  --tile-seam: rgba(0, 0, 0, 0.2);
+  --board-bg: #1A1A1A;
+  --scramble-1: #666;
+  --scramble-2: #888;
+  --scramble-3: #AAA;
+  --scramble-4: #CCC;
+  --scramble-5: #999;
+  --scramble-6: #777;
+}
+
+.board[data-theme="minimal"] .tile-front,
+.board[data-theme="minimal"] .tile-back {
+  background: var(--tile-bg);
+  box-shadow: none;
+}
+
+.board[data-theme="minimal"] .tile-front span,
+.board[data-theme="minimal"] .tile-back span {
+  color: var(--tile-text);
+}
+
+.board[data-theme="minimal"] .tile-front::before,
+.board[data-theme="minimal"] .tile-back::before {
+  display: none; /* No metallic reflection */
+}
+
+.board[data-theme="minimal"] {
+  background: var(--board-bg);
+  box-shadow: none;
+}
+
+.board[data-theme="minimal"] .accent-bar {
+  display: none;
+}

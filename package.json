@@ -1,0 +1,15 @@
+{
+  "name": "flipoff",
+  "version": "1.0.0",
+  "description": "Split-flap display emulator with remote control, weather, and tour data",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "ws": "^8.18.0"
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#111111">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>FlipOff Remote</title>
+  <link rel="stylesheet" href="css/remote.css">
+</head>
+<body>
+  <div class="remote">
+    <header class="remote-header">
+      <h1>FlipOff.</h1>
+      <span class="status-dot" id="status-dot"></span>
+    </header>
+
+    <!-- Mode Selector -->
+    <section class="remote-section">
+      <h2>Mode</h2>
+      <div class="mode-grid" id="mode-grid">
+        <button class="mode-btn" data-mode="auto">Auto</button>
+        <button class="mode-btn" data-mode="clock">Clock</button>
+        <button class="mode-btn" data-mode="weather">Weather</button>
+        <button class="mode-btn" data-mode="tour">Tour</button>
+        <button class="mode-btn" data-mode="quotes">Quotes</button>
+        <button class="mode-btn" data-mode="custom">Custom</button>
+      </div>
+    </section>
+
+    <!-- Custom Message -->
+    <section class="remote-section">
+      <h2>Send Message</h2>
+      <textarea id="message-input" placeholder="Type a message..." rows="3" maxlength="110"></textarea>
+      <div class="message-actions">
+        <span class="char-count" id="char-count">0 / 110</span>
+        <button class="send-btn" id="send-btn">Send</button>
+      </div>
+    </section>
+
+    <!-- Theme Picker -->
+    <section class="remote-section">
+      <h2>Theme</h2>
+      <div class="theme-grid" id="theme-grid">
+        <button class="theme-swatch" data-theme="classic" title="Classic">
+          <span class="swatch-color" style="background: #222; border: 2px solid #00AAFF;"></span>
+          <span class="swatch-label">Classic</span>
+        </button>
+        <button class="theme-swatch" data-theme="airport" title="Airport">
+          <span class="swatch-color" style="background: #F5F0E0; border: 2px solid #FFD700;"></span>
+          <span class="swatch-label">Airport</span>
+        </button>
+        <button class="theme-swatch" data-theme="train-station" title="Train Station">
+          <span class="swatch-color" style="background: #1A3A2A; border: 2px solid #32CD32;"></span>
+          <span class="swatch-label">Train</span>
+        </button>
+        <button class="theme-swatch" data-theme="neon" title="Neon">
+          <span class="swatch-color" style="background: #0A0A0A; border: 2px solid #00F5FF;"></span>
+          <span class="swatch-label">Neon</span>
+        </button>
+        <button class="theme-swatch" data-theme="minimal" title="Minimal">
+          <span class="swatch-color" style="background: #2A2A2A; border: 2px solid #666;"></span>
+          <span class="swatch-label">Minimal</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section class="remote-section">
+      <h2>Controls</h2>
+      <div class="control-grid">
+        <button class="control-btn" id="btn-fullscreen">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+          Fullscreen
+        </button>
+        <button class="control-btn" id="btn-sound">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          Sound
+        </button>
+        <button class="control-btn" id="btn-prev">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Prev
+        </button>
+        <button class="control-btn" id="btn-next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          Next
+        </button>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section class="remote-section">
+      <h2>Settings</h2>
+      <div class="settings-group">
+        <label>OpenWeatherMap API Key</label>
+        <div class="input-row">
+          <input type="password" id="weather-key" placeholder="Enter API key">
+          <button class="save-btn" id="save-weather-key">Save</button>
+        </div>
+      </div>
+      <div class="settings-group">
+        <label>MasterTour URL</label>
+        <div class="input-row">
+          <input type="text" id="mastertour-url" placeholder="http://localhost:3010">
+          <button class="save-btn" id="save-mastertour-url">Save</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="js/remote/remote-app.js"></script>
+</body>
+</html>

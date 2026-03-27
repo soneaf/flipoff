@@ -63,6 +63,21 @@
   display: none;
 }
 
+/* Connection status */
+.connection-status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #666;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.connection-status.connected {
+  background: #00FF7F;
+  box-shadow: 0 0 6px rgba(0, 255, 127, 0.4);
+}
+
 /* Hero */
 .hero {
   text-align: center;
